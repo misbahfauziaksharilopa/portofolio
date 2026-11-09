@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio</title>
+
+  <!-- Tailwind CSS (via CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'] },
+          colors: { ink: '#1B2430', paper: '#F4F6F8', accent: '#2F5BEA' }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-paper font-sans text-ink antialiased selection:bg-accent selection:text-white">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="sticky top-0 z-20 border-b border-slate-200/80 bg-paper/80 backdrop-blur-md transition-all duration-300">
+    <nav class="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
+      <a href="#" class="text-lg font-bold tracking-tight transition-transform duration-300 hover:scale-105">Misbah Fauzi A. Lopa</a>
+      <ul class="flex gap-5 text-sm sm:gap-8 font-medium">
+        <li><a href="#tentang" class="transition-colors duration-200 hover:text-accent">Tentang</a></li>
+        <li><a href="#sertifikat" class="transition-colors duration-200 hover:text-accent">Sertifikat</a></li>
+        <li><a href="#keahlian" class="transition-colors duration-200 hover:text-accent">Keahlian & Stack</a></li>
+        <li><a href="#kontak" class="transition-colors duration-200 hover:text-accent">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-5">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="grid items-center gap-10 py-16 md:grid-cols-2 md:py-24">
+      <div>
+        <span class="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+          SMK Telkom Makasssar Student
+        </span>
+        <h1 class="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+          Halo, Saya Misbah
+        </h1>
+        <p class="mt-5 max-w-md text-slate-600 leading-relaxed">
+          Tertarik pada arsitektur sistem, pengelolaan basis data, dan pembuatan antarmuka pengguna yang nyaman dan responsif.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#keahlian" class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-ink px-6 py-3 text-sm font-medium text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:shadow-lg hover:shadow-accent/25 active:translate-y-0">
+            <span>Lihat keahlian</span>
+            <svg class="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <a href="#kontak" class="rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-ink hover:bg-slate-50 hover:shadow-sm active:translate-y-0">
+            Hubungi saya
+          </a>
+        </div>
+      </div>
+
+      <!-- TEMPAT FOTO PROFIL -->
+      <div class="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-slate-200 shadow-xl transition-all duration-500 hover:shadow-2xl md:justify-self-end">
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-1 text-sm text-slate-500">
+          <span>Foto profil</span>
+          <span class="text-xs">img/foto-profil.jpg</span>
+        </div>
+        <img src="img/WhatsApp Image 2026-11-09 at 4.09.57 PM.jpeg" alt="Foto profil" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105" onerror="this.remove()">
+      </div>
+    </section>
+
+    <!-- ===== TENTANG ===== -->
+    <section id="tentang" class="scroll-mt-24 border-t border-slate-200 py-16">
+      <div class="grid gap-8 md:grid-cols-3">
+        <h2 class="text-2xl font-bold tracking-tight">Tentang saya</h2>
+        <div class="space-y-4 leading-relaxed text-slate-600 md:col-span-2">
+          <p class="transition-colors duration-300 hover:text-ink">
+            Saya Misbah Fauzi A. Lopa, siswa Rekayasa Perangkat Lunak di SMK Telkom Makassar yang berfokus pada pengembangan web dan aplikasi berbasis desktop maupun mobile.
+          </p>
+          <p class="transition-colors duration-300 hover:text-ink">
+            Saya terbiasa merancang aplikasi secara menyeluruh, mulai dari perancangan alur basis data relasional hingga implementasi antarmuka yang bersih dan responsif.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERTIFIKAT ===== -->
+    <section id="sertifikat" class="scroll-mt-24 border-t border-slate-200 py-16">
+      <h2 class="text-2xl font-bold tracking-tight">Sertifikat</h2>
+      <div class="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Sertifikat 1 -->
+        <article class="group cursor-pointer rounded-2xl bg-white p-3 ring-1 ring-slate-200/60 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:ring-accent/40">
+          <div class="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
+            <div class="absolute inset-0 flex items-center justify-center text-xs text-slate-400">img/sertifikat-1.jpg</div>
+            <img src="img/Screenshot 2026-11-09 141838.png" alt="Sertifikat 1" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" onerror="this.remove()">
+          </div>
+          <div class="p-2">
+            <h4 class="mt-2 font-bold transition-colors duration-300 group-hover:text-accent">Finalis Nasional &middot; IT Software Solution for Bussiness</h4>
+            <p class="mt-1 text-sm text-slate-500">Lomba Kompetensi Siswa (LKS) Dikmen &middot; 2026</p>
+          </div>
+        </article>
+
+        <!-- Sertifikat 2 -->
+        <article class="group cursor-pointer rounded-2xl bg-white p-3 ring-1 ring-slate-200/60 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:ring-accent/40">
+          <div class="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
+            <div class="absolute inset-0 flex items-center justify-center text-xs text-slate-400">img/sertifikat-2.jpg</div>
+            <img src="img/Screenshot 2026-11-09 141855.png" alt="Sertifikat 2" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" onerror="this.remove()">
+          </div>
+          <div class="p-2">
+            <h4 class="mt-2 font-bold transition-colors duration-300 group-hover:text-accent">Juara 1 Provinsi &middot; IT Software Solution for Bussiness</h4>
+            <p class="mt-1 text-sm text-slate-500">Lomba Kompetensi Siswa (LKS) Dikmen &middot; 2026</p>
+          </div>
+        </article>
+
+        <!-- Sertifikat 3 -->
+        <article class="group cursor-pointer rounded-2xl bg-white p-3 ring-1 ring-slate-200/60 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:ring-accent/40">
+          <div class="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
+            <div class="absolute inset-0 flex items-center justify-center text-xs text-slate-400">img/sertifikat-3.jpg</div>
+            <img src="img/Screenshot 2026-11-09 142013.png" alt="Sertifikat 3" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" onerror="this.remove()">
+          </div>
+          <div class="p-2">
+            <h4 class="mt-2 font-bold transition-colors duration-300 group-hover:text-accent">Finalis &middot; Programming Category</h4>
+            <p class="mt-1 text-sm text-slate-500">National Programming Logic Competition (NPLC) 13th  &middot; 2026</p>
+          </div>
+        </article>
+
+        <!-- Sertifikat 4 -->
+        <article class="group cursor-pointer rounded-2xl bg-white p-3 ring-1 ring-slate-200/60 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:ring-accent/40">
+          <div class="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
+            <div class="absolute inset-0 flex items-center justify-center text-xs text-slate-400">img/sertifikat-3.jpg</div>
+            <img src="img/Screenshot 2026-11-09 142037.png" alt="Sertifikat 3" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" onerror="this.remove()">
+          </div>
+          <div class="p-2">
+            <h4 class="mt-2 font-bold transition-colors duration-300 group-hover:text-accent">Top 15th Finalist &middot; Prototype Training & Competition 3.0</h4>
+            <p class="mt-1 text-sm text-slate-500">D'Alchemy of Chrysalis &middot; 2026</p>
+          </div>
+        </article>
+
+        <!-- Sertifikat 5 -->
+        <article class="group cursor-pointer rounded-2xl bg-white p-3 ring-1 ring-slate-200/60 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:ring-accent/40">
+          <div class="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
+            <div class="absolute inset-0 flex items-center justify-center text-xs text-slate-400">img/sertifikat-3.jpg</div>
+            <img src="img/Screenshot 2026-11-09 141929.png" alt="Sertifikat 3" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" onerror="this.remove()">
+          </div>
+          <div class="p-2">
+            <h4 class="mt-2 font-bold transition-colors duration-300 group-hover:text-accent">Top 15 Teams &middot; Best Capstone Team</h4>
+            <p class="mt-1 text-sm text-slate-500">Coding Camp Powered by DBS Fountain &middot; 2025</p>
+          </div>
+        </article>
+
+        <!-- Sertifikat 6 -->
+        <article class="group cursor-pointer rounded-2xl bg-white p-3 ring-1 ring-slate-200/60 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:ring-accent/40">
+          <div class="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
+            <div class="absolute inset-0 flex items-center justify-center text-xs text-slate-400">img/sertifikat-3.jpg</div>
+            <img src="img/Screenshot 2026-11-09 141950.png" alt="Sertifikat 3" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" onerror="this.remove()">
+          </div>
+          <div class="p-2">
+            <h4 class="mt-2 font-bold transition-colors duration-300 group-hover:text-accent">Successfully Completing &middot; Front-End and Back-End Developer</h4>
+            <p class="mt-1 text-sm text-slate-500">Coding Camp Powered by DBS Fountain &middot; 2025</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== KEAHLIAN & TECH STACK ===== -->
+    <section id="keahlian" class="scroll-mt-24 border-t border-slate-200 py-16">
+      <h2 class="text-2xl font-bold tracking-tight">Keahlian & Tech Stack</h2>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        
+        <!-- Kategori 1: Apps Development -->
+        <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-200/60 shadow-sm transition-all duration-300 hover:shadow-md">
+          <h3 class="font-bold text-lg text-ink flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-accent"></span> Apps
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">C# WinForms</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">Kotlin (Android)</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">Jetpack Compose</li>
+          </ul>
+        </div>
+
+        <!-- Kategori 2: Web & Frontend -->
+        <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-200/60 shadow-sm transition-all duration-300 hover:shadow-md">
+          <h3 class="font-bold text-lg text-ink flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-accent"></span> Web
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">HTML5 & CSS3</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">Tailwind CSS</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">JavaScript</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">React</li>
+          </ul>
+        </div>
+
+        <!-- Kategori 3: Backend & Database -->
+        <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-200/60 shadow-sm transition-all duration-300 hover:shadow-md">
+          <h3 class="font-bold text-lg text-ink flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-accent"></span> Backend & Database
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">ASP.NET Web API</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">MySQL / SQL Server</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">SQLite</li>
+          </ul>
+        </div>
+
+        <!-- Kategori 4: Tools & Version Control -->
+        <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-200/60 shadow-sm transition-all duration-300 hover:shadow-md sm:col-span-3 lg:col-span-3">
+          <h3 class="font-bold text-lg text-ink flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-accent"></span> Tools & Workflow
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">Git & GitHub</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">Android Studio</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">Visual Studio</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">VS Code</li>
+            <li class="cursor-default rounded-lg bg-paper px-3 py-1.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-accent hover:text-white">Postman / Swagger</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section id="kontak" class="scroll-mt-24 border-t border-slate-200 py-16">
+      <div class="relative overflow-hidden rounded-3xl bg-ink px-6 py-14 text-center text-white shadow-2xl sm:px-12">
+        <div class="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-accent/20 blur-3xl"></div>
+        <div class="absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-accent/20 blur-3xl"></div>
+
+        <div class="relative z-10">
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Mari terhubung & berkolaborasi</h2>
+          <p class="mx-auto mt-3 max-w-md text-slate-300">
+            Tertarik untuk berdiskusi seputar proyek perangkat lunak, pengembangan web, atau peluang kerja sama? Jangan ragu untuk menghubungi saya.
+          </p>
+          <a href="mailto:misbahfauziaksharilopa@gmail.com" class="mt-8 inline-block rounded-xl bg-white px-8 py-3.5 text-sm font-semibold text-ink shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-accent hover:text-white hover:shadow-accent/40 active:translate-y-0">
+            misbahfauziaksharilopa@gmail.com
+          </a>
+          <div class="mt-8 flex justify-center gap-6 text-sm font-medium text-slate-300">
+            <a href="https://github.com/Misbah-Fauzi" target="_blank" rel="noopener noreferrer" class="transition-all duration-200 hover:-translate-y-0.5 hover:text-white">GitHub</a>
+            <a href="www.linkedin.com/in/misbah-fauzi-a-l-19408b324" target="_blank" rel="noopener noreferrer" class="transition-all duration-200 hover:-translate-y-0.5 hover:text-white">LinkedIn</a>
+            <a href="https://www.instagram.com/_msbhfal/" target="_blank" rel="noopener noreferrer" class="transition-all duration-200 hover:-translate-y-0.5 hover:text-white">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+    &copy; 2026 Misbah Fauzi A. Lopa.
+  </footer>
+
+</body>
+</html>
